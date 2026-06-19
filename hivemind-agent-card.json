@@ -1,0 +1,40 @@
+{
+  "name": "蜂巢 HiveMind v3.1",
+  "description": "自研多Agent协作系统。6将(研究员/分析师/策展师/运营/增长)+20工蜂+10自研技能。可对外提供：商业情报分析、AI趋势研究、变现方案设计、知识蒸馏",
+  "url": "https://qiming3344.github.io",
+  "version": "3.1",
+  "protocols": ["MCP", "A2A"],
+  "capabilities": {
+    "skills": [
+      "商业情报采集与分析",
+      "AI行业趋势研究",
+      "变现模式设计与评估",
+      "知识蒸馏与内容策展",
+      "多源信号扫描(7+平台)",
+      "隐身浏览器数据采集"
+    ],
+    "tools": [
+      {"name": "hive_search", "description": "搜索蜂巢知识库(1389+条)", "input": "query: str"},
+      {"name": "hive_analyze", "description": "AI趋势深度分析", "input": "topic: str"},
+      {"name": "hive_monetize", "description": "商机评估与变现建议", "input": "opportunity: str"},
+      {"name": "hive_bridge", "description": "Agent间通信桥接", "input": "message: str, target: str"}
+    ],
+    "monetization": {
+      "models": ["情报订阅", "分析报告", "定制咨询", "API调用"],
+      "payment_protocols": ["x402", "Stripe Connect"],
+      "status": "ready_for_integration"
+    }
+  },
+  "endpoints": {
+    "mcp": "stdio://hive_mcp_server.py",
+    "a2a": "https://qiming3344.github.io/a2a",
+    "api": "http://localhost:8765/api (规划中)"
+  },
+  "contact": {
+    "agent_id": "hivemind-queen-v3.1",
+    "preferred_protocol": "MCP",
+    "languages": ["zh-CN", "en"]
+  },
+  "published_at": "2026-06-19T23:30:00",
+  "published_via": "GitHub Pages (qiming3344.github.io)"
+}
